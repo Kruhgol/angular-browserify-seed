@@ -1,19 +1,115 @@
+
 <!DOCTYPE html>
 <html ng-app="expressly">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!--bowerStyles-->
     <!--styles-->
-    <!-- <link rel="stylesheet" type="text/css" href="./styles/style.css"> -->
+    <style>
+    	html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%; }
+  html header, body header {
+    width: 100%;
+    background-color: green;
+    margin-bottom: 20px; }
+    html header .menu, body header .menu {
+      margin: auto;
+      width: 240px; }
+      html header .menu a, body header .menu a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        width: 100px;
+        background-color: red;
+        float: left;
+        text-align: center;
+        font-size: 2em;
+        color: black;
+        border: solid 1px black; }
+      html header .menu .header-both, body header .menu .header-both {
+        clear: both; }
+  html .albom-conteiner, body .albom-conteiner {
+    max-width: 960px;
+    width: 90%;
+    background-color: red;
+    margin: auto; }
+    html .albom-conteiner .picture, body .albom-conteiner .picture {
+      width: 29%;
+      float: left;
+      margin-right: 1%;
+      margin-bottom: 5px;
+      position: relative;
+      text-align: center; }
+      @media only screen and (max-width: 320px) {
+        html .albom-conteiner .picture, body .albom-conteiner .picture {
+          width: 95%; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        html .albom-conteiner .picture, body .albom-conteiner .picture {
+          width: 48%; } }
+      @media only screen and (min-width: 1024px) {
+        html .albom-conteiner .picture, body .albom-conteiner .picture {
+          width: 29%; } }
+      html .albom-conteiner .picture img, body .albom-conteiner .picture img {
+        width: 100%; }
+      html .albom-conteiner .picture a, body .albom-conteiner .picture a {
+        display: block;
+        background-color: red;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        text-decoration: none; }
+        @media only screen and (max-width: 320px) {
+          html .albom-conteiner .picture a, body .albom-conteiner .picture a {
+            font-size: 1rem; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          html .albom-conteiner .picture a, body .albom-conteiner .picture a {
+            font-size: 1.5rem; } }
+        @media only screen and (min-width: 1024px) {
+          html .albom-conteiner .picture a, body .albom-conteiner .picture a {
+            font-size: 2rem; } }
+      @media only screen and (max-width: 320px) {
+        html .albom-conteiner .picture span, body .albom-conteiner .picture span {
+          font-size: 0.75rem; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        html .albom-conteiner .picture span, body .albom-conteiner .picture span {
+          font-size: 1rem; } }
+      @media only screen and (min-width: 1024px) {
+        html .albom-conteiner .picture span, body .albom-conteiner .picture span {
+          font-size: 1rem; } }
+  html footer, body footer {
+    width: 100%;
+    height: 40px;
+    display: table;
+    position: fixed;
+    bottom: 0;
+    background-color: green;
+    z-index: 2; }
+    html footer div, body footer div {
+      width: 50%;
+      height: 40px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+    </style>
 </head>
 <body>
-<a href="#/albom">hghfghfhffhgfhgffghf</a>
-<div class="albom-conteiner"></div>
+<header>
+    <div class="menu">
+        <a href="#">Root</a>
+        <a href="https://www.google.com.ua/" target="_blank">Google</a>
+        <div class="header-both"></div>
+    </div>
+</header>
 <div class="container" ng-view></div>
 
-
+<footer>
+    <div class="footer-name">Nikolay Kruhgol a-mail: kruhgol@gmail.com </div>
+    <div class="footer-github"><a href="https://github.com/Kruhgol/photo_viewer">Test task</a></div>
+</footer>
 <!--scripts-->
 <!--config-->
 </body>

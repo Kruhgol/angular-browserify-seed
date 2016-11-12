@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function myDirective() {
+module.exports = function albumDirective() {
 	return function(scope, element, attr) {	
 			var begin = 0;
 			var end = 10;

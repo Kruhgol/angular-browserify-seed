@@ -13,15 +13,22 @@ var sassOptions = {
 };
 
 function handleError(err) {
+    console.log('SASS ERROR');
+    console.log('SASS ERROR');
+    console.log('SASS ERROR');
     console.log(err.toString());
     this.emit('end');
 }
 
 module.exports = gulp.task('styles', function () {
+    console.log("src", config.paths.src.styles);
+    console.log("dest", config.paths.src.styles);
     return gulp.src(config.paths.src.styles)
         .pipe(sass(sassOptions).on('error', handleError))
         .pipe(autoprefixer('last 1 version'))
         .pipe(gulpif(release, csso()))
-        .pipe(gulpif(release, rename(config.filenames.release.styles), rename(config.filenames.build.styles)))
+        .pipe(gulpif(release, 
+            rename(config.filenames.release.styles),
+            rename(config.filenames.build.styles)))
         .pipe(gulpif(release, gulp.dest(config.paths.dest.release.styles), gulp.dest(config.paths.dest.build.styles)));
 });

@@ -7,6 +7,5 @@ module.exports =
         .controller('barController', require('./controllers/bar.controller'))
         .controller('photoViewerContrloller', require('./controllers/photoViewer.controller'))
         .directive('myDirective', require('./directives/myDirective.directive'))
-        .factory('getData', require('./services/getData.service'))
-
+        .directive('albumDirective', require('./directives/albumDirective.directive'))
         ;
