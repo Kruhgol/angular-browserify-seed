@@ -7,6 +7,10 @@ module.exports = /*ngInject*/
                 templateUrl: 'app/foo/templates/bar.html',
                 controller: 'barController'
             })
+            .when('/',{
+                templateUrl: 'app/foo/templates/first.html',
+                controller: 'photoViewerContrloller'
+            })
             .otherwise({
                 redirectTo: '/bar'
             });

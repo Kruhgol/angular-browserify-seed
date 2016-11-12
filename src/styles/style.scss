@@ -1,0 +1,13 @@
+.albom-conteiner {
+	width: 960px;
+	height: 200px;
+	background-color: red  !important;
+	.picture {
+		float: left;
+		width: 33%;
+	}
+
+	.picture img{
+		width: 100%;
+	}
+}
