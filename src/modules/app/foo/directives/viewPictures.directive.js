@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = function myDirective() {
+module.exports = function viewPictures() {
 	return function(scope, element, attr) {	
 			var begin = 0;
-			var end = 10;
+			var end = 12;
 
 			scope.$on('sob', function(){
 				var parentDiv = angular.element("<div class='view-container'>");
@@ -16,8 +16,8 @@ module.exports = function myDirective() {
 				    var scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
 
 				    if((documentHeight - clientHeight) <= scrollTop) {
-				        begin +=10;
-				        end +=10;
+				        begin +=12;
+				        end +=12;
 				        appElement(scope.imagesArray.slice(begin,end));
 				    }		
 				}

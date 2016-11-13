@@ -8,6 +8,5 @@ module.exports =
         .controller('photoViewerContrloller', require('./controllers/photoViewer.controller'))
         .controller('albumController', require('./controllers/album.controller'))
         .controller('pictureController', require('./controllers/picture.controller'))
-        .directive('myDirective', require('./directives/myDirective.directive'))
-        .directive('albumDirective', require('./directives/albumDirective.directive'))
+        .directive('viewPictures', require('./directives/viewPictures.directive'))
         ;
