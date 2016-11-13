@@ -1,8 +1,10 @@
+//controller for tamplate "picture.tamplate.js"
+
 'use strict';
 
 module.exports = /*@ngInject*/
     function pictureController($scope, $location, $http, $routeParams) {
-	    $scope.id = $routeParams.id;
+	    $scope.id = $routeParams.id;  //link to id of images
 		pictureUpdate($scope.id);
 
 	    function pictureUpdate(root) {

@@ -13,3 +13,6 @@
 2. run `bower install`
 3. run `gulp`
 4. Page will be served on port `1337`; navigate to `localhost:1337`
+
+###Nikolay Kruhgol:
+CSS styles are connected via the tag <style> in the index.html, because gulp does not builds build-style!!!

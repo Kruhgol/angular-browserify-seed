@@ -1,13 +1,198 @@
-.albom-conteiner {
-	width: 960px;
-	height: 200px;
-	background-color: red  !important;
-	.picture {
-		float: left;
-		width: 33%;
-	}
+$small: 320px;
+$large: 1024px;
+$colorHeader: #D3F2E7;
+$colorLink: #15D8E4;
 
-	.picture img{
-		width: 100%;
-	}
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $large) { @content; }
+  }
 }
+
+@mixin grid() {
+    width: 32%;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+    @include respond-to(handhelds) { width: 95%;}
+    @include respond-to(medium-screens) { width: 48%; }
+
+}
+
+
+html, body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    h1 {
+        text-align: center;
+    }
+    header {
+        width: 100%;
+        background-color: $colorHeader;
+        margin-bottom: 20px;
+
+        
+        
+        .menu {
+            margin: auto;
+            width: 100%;
+            height: 100px;
+            display: table;
+            @include respond-to(wide-screens) { width: 500px; };            
+            
+            a:nth-child(1) .sprite{
+                background-position: 49px;
+            }
+            a {
+                display: table-cell;
+                text-decoration: none;
+                width: 50%;
+                background-color: $colorLink;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 3em;
+                color: black;
+                border: solid 1px black;
+                @include respond-to(wide-screens) { width: 250px; }; 
+                
+                
+                    .sprite {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        background-image: url(./assets/img/sprite.png); 
+                        margin-right: 10px;
+                    }
+                    
+                    span {
+                        display: inline-block;
+                            @include respond-to(handhelds) { display: none};
+                            @include respond-to(medium-screens) { display: none};
+                    }
+            }
+        }
+    }
+
+    .container {
+        max-width: 960px;
+        width: 100%;
+        margin: auto;   
+        text-align: center;        
+
+            .picture-container {
+                width: 100%;
+                
+                    .picture {
+                        width: 100%;
+                        max-width: 600px;
+                        margin: auto;
+                        
+                            img {
+                                width: 100%;
+                            }
+                    }
+                    
+            }
+        
+
+             .album-container{
+                 width: 100%;
+                 
+                 .album-picture {
+                    @include grid();    
+                    
+                        .album-a-picture {
+                         width: 100%;
+                         display: block;
+                         
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        
+                        .album-title {
+                            display: block;
+                            height: 50px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                 }
+
+                 
+
+             }
+
+
+      
+     .view-container{
+         width: 100%;
+            
+        .view-picture {
+            @include grid();
+                
+                .view-a-picture {
+                    width: 100%;
+                    display: block;
+                    
+                        img {
+                            width: 100%;
+                        }
+                }
+                
+                .view-a-album {
+                    display: block;
+                    background-color: red;
+                    position: absolute;
+                    left: -10px;
+                    top: 0;
+                    text-decoration: none;
+                    @include respond-to(handhelds) { font-size: 1rem;}
+                    @include respond-to(medium-screens) { font-size: 1.5rem;; }
+                    @include respond-to(wide-screens) { font-size: 2rem; }
+                }
+                .view-title {
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @include respond-to(handhelds) { font-size: 0.75rem;}
+                    @include respond-to(medium-screens) { font-size: 1rem; }
+                    @include respond-to(wide-screens) { font-size: 1rem;} 
+                }
+        }
+    } 
+ }
+    footer{
+        width: 100%;
+        height: 40px;
+        display: table;
+        position: fixed;
+        bottom: 0;
+        background-color: #497B7E;
+        z-index: 2;
+        div {
+            width: 50%;
+            height: 40px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            @include respond-to(handhelds) { font-size: 0.8em};
+            @include respond-to(medium-screens) { fint-size: 1em};
+        }
+    }
+           
+}
+
+
+
+
