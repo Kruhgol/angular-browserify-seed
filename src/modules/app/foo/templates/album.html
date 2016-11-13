@@ -1,1 +1,10 @@
-<div album-directive></div>
+
+<h1>Album - {{album_id}}</h1>
+<div class="album-container">
+	<div class="album-picture" ng-repeat="image in albumIdArray">
+        <a href="{{'#/picture/' + image.id}}" class="album-a-picture">
+        	<img ng-src="{{image.url}}">
+        </a>
+        <span class="album-title">{{image.title}}</span>
+    </div>
+</div>

@@ -6,7 +6,7 @@ module.exports = function myDirective() {
 			var end = 10;
 
 			scope.$on('sob', function(){
-				var parentDiv = angular.element("<div class='albom-conteiner'>");
+				var parentDiv = angular.element("<div class='view-container'>");
 				element.append(parentDiv);
 				appElement(scope.imagesArray.slice(begin,end));
 				
@@ -24,15 +24,22 @@ module.exports = function myDirective() {
 
 				function appElement(arr){
 					for(var i = 0; i < arr.length; i++){
-						var pictureDiv = angular.element("<div class='picture'>");
+
+						var pictureDiv = angular.element("<div class='view-picture'>");
+						var aPicture = angular.element("<a class='view-a-picture'>");
 						var img = angular.element("<img>");
-						var span = angular.element("<span>"); 
-						var a = angular.element("<a>Album</a>");
-						a.text("Album " + arr[i].albumId);
-						a.attr('href', '#/album/' + arr[i].albumId);
+						var span = angular.element("<span class='view-title'>"); 
+						var aAlbum = angular.element("<a class='view-a-album'>");
+
+						span.text(arr[i].title);
+						aAlbum.text("Album " + arr[i].albumId);
+						aAlbum.attr('href', '#/album/' + arr[i].albumId);
+						aPicture.attr('href', '#/picture/' + arr[i].id);
 						img.attr("src", arr[i].url);
-						pictureDiv.append(img);
-						pictureDiv.append(a);
+
+						aPicture.append(img);
+						pictureDiv.append(aPicture);
+						pictureDiv.append(aAlbum);
 						pictureDiv.append(span);
 						parentDiv.append(pictureDiv);
 					};	

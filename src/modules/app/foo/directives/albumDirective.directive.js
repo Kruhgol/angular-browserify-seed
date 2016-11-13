@@ -26,8 +26,9 @@ module.exports = function albumDirective() {
 					for(var i = 0; i < arr.length; i++){
 						var pictureDiv = angular.element("<div class='picture'>");
 						var img = angular.element("<img>");
-						var span = angular.element("<span>"); 
+						var span = angular.element("<p>"); 
 						var a = angular.element("<a>Album</a>");
+						span.text('hh' + arr[i].title);
 						a.text("Album " + arr[i].albumId);
 						a.attr('href', '#/album/' + arr[i].albumId);
 						img.attr("src", arr[i].url);

@@ -8,12 +8,16 @@ module.exports = /*ngInject*/
                 controller: 'barController'
             })
             .when('/',{
-                templateUrl: 'app/foo/templates/first.html',
+                templateUrl: 'app/foo/templates/view.html',
                 controller: 'photoViewerContrloller'
             })
-            .when('/album/:id',{
+            .when('/album/:album_id',{
                 templateUrl: 'app/foo/templates/album.html',
-                controller: 'photoViewerContrloller'
+                controller: 'albumController'
+            })
+            .when('/picture/:id',{
+                templateUrl: 'app/foo/templates/picture.html',
+                controller: 'pictureController'
             })
             .otherwise({
                 redirectTo: '/bar'

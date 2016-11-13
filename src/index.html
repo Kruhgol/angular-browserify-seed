@@ -7,11 +7,13 @@
     <!--bowerStyles-->
     <!--styles-->
     <style>
-    	html, body {
+html, body {
   height: 100%;
   margin: 0px;
   padding: 0px;
   width: 100%; }
+  html h1, body h1 {
+    text-align: center; }
   html header, body header {
     width: 100%;
     background-color: green;
@@ -32,54 +34,120 @@
         border: solid 1px black; }
       html header .menu .header-both, body header .menu .header-both {
         clear: both; }
-  html .albom-conteiner, body .albom-conteiner {
+  html .container, body .container {
     max-width: 960px;
-    width: 90%;
-    background-color: red;
-    margin: auto; }
-    html .albom-conteiner .picture, body .albom-conteiner .picture {
-      width: 29%;
-      float: left;
-      margin-right: 1%;
-      margin-bottom: 5px;
-      position: relative;
-      text-align: center; }
-      @media only screen and (max-width: 320px) {
-        html .albom-conteiner .picture, body .albom-conteiner .picture {
-          width: 95%; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
-        html .albom-conteiner .picture, body .albom-conteiner .picture {
-          width: 48%; } }
-      @media only screen and (min-width: 1024px) {
-        html .albom-conteiner .picture, body .albom-conteiner .picture {
-          width: 29%; } }
-      html .albom-conteiner .picture img, body .albom-conteiner .picture img {
+    width: 100%;
+    margin: auto;
+    text-align: center; }
+    html .container .picture-container, body .container .picture-container {
+      width: 100%; }
+      html .container .picture-container .picture, body .container .picture-container .picture {
+        width: 100%;
+        max-width: 600px;
+        margin: auto; }
+        html .container .picture-container .picture img, body .container .picture-container .picture img {
+          width: 100%; }
+      html .container .picture-container .picture-novigation, body .container .picture-container .picture-novigation {
+        display: table;
         width: 100%; }
-      html .albom-conteiner .picture a, body .albom-conteiner .picture a {
-        display: block;
-        background-color: red;
-        position: absolute;
-        left: -10px;
-        top: 0;
-        text-decoration: none; }
+        html .container .picture-container .picture-novigation .number, body .container .picture-container .picture-novigation .number {
+          font-size: 30px; }
+        html .container .picture-container .picture-novigation div, body .container .picture-container .picture-novigation div {
+          display: table-cell;
+          width: 33%;
+          height: 50px;
+          text-align: center;
+          vertical-align: middle; }
+          @media only screen and (max-width: 320px) {
+            html .container .picture-container .picture-novigation div button, body .container .picture-container .picture-novigation div button {
+              width: 60%; } }
+          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            html .container .picture-container .picture-novigation div button, body .container .picture-container .picture-novigation div button {
+              width: 45%; } }
+          @media only screen and (min-width: 1024px) {
+            html .container .picture-container .picture-novigation div button, body .container .picture-container .picture-novigation div button {
+              width: 30%; } }
+    html .container .album-container, body .container .album-container {
+      width: 100%; }
+      html .container .album-container .album-picture, body .container .album-container .album-picture {
+        width: 33%;
+        float: left;
+        margin-right: 1%;
+        margin-bottom: 5px;
+        position: relative;
+        text-align: center; }
         @media only screen and (max-width: 320px) {
-          html .albom-conteiner .picture a, body .albom-conteiner .picture a {
-            font-size: 1rem; } }
+          html .container .album-container .album-picture, body .container .album-container .album-picture {
+            width: 95%; } }
         @media only screen and (min-width: 321px) and (max-width: 1023px) {
-          html .albom-conteiner .picture a, body .albom-conteiner .picture a {
-            font-size: 1.5rem; } }
+          html .container .album-container .album-picture, body .container .album-container .album-picture {
+            width: 48%; } }
         @media only screen and (min-width: 1024px) {
-          html .albom-conteiner .picture a, body .albom-conteiner .picture a {
-            font-size: 2rem; } }
-      @media only screen and (max-width: 320px) {
-        html .albom-conteiner .picture span, body .albom-conteiner .picture span {
-          font-size: 0.75rem; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
-        html .albom-conteiner .picture span, body .albom-conteiner .picture span {
-          font-size: 1rem; } }
-      @media only screen and (min-width: 1024px) {
-        html .albom-conteiner .picture span, body .albom-conteiner .picture span {
-          font-size: 1rem; } }
+          html .container .album-container .album-picture, body .container .album-container .album-picture {
+            width: 31%; } }
+        html .container .album-container .album-picture .album-a-picture, body .container .album-container .album-picture .album-a-picture {
+          width: 100%;
+          display: block; }
+          html .container .album-container .album-picture .album-a-picture img, body .container .album-container .album-picture .album-a-picture img {
+            width: 100%; }
+        html .container .album-container .album-picture .album-title, body .container .album-container .album-picture .album-title {
+          display: block;
+          height: 50px;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+    html .container .view-container, body .container .view-container {
+      width: 100%; }
+      html .container .view-container .view-picture, body .container .view-container .view-picture {
+        width: 33%;
+        float: left;
+        margin-right: 1%;
+        margin-bottom: 5px;
+        position: relative;
+        text-align: center; }
+        @media only screen and (max-width: 320px) {
+          html .container .view-container .view-picture, body .container .view-container .view-picture {
+            width: 95%; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          html .container .view-container .view-picture, body .container .view-container .view-picture {
+            width: 48%; } }
+        @media only screen and (min-width: 1024px) {
+          html .container .view-container .view-picture, body .container .view-container .view-picture {
+            width: 31%; } }
+        html .container .view-container .view-picture .view-a-picture, body .container .view-container .view-picture .view-a-picture {
+          width: 100%;
+          display: block; }
+          html .container .view-container .view-picture .view-a-picture img, body .container .view-container .view-picture .view-a-picture img {
+            width: 100%; }
+        html .container .view-container .view-picture .view-a-album, body .container .view-container .view-picture .view-a-album {
+          display: block;
+          background-color: red;
+          position: absolute;
+          left: -10px;
+          top: 0;
+          text-decoration: none; }
+          @media only screen and (max-width: 320px) {
+            html .container .view-container .view-picture .view-a-album, body .container .view-container .view-picture .view-a-album {
+              font-size: 1rem; } }
+          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            html .container .view-container .view-picture .view-a-album, body .container .view-container .view-picture .view-a-album {
+              font-size: 1.5rem; } }
+          @media only screen and (min-width: 1024px) {
+            html .container .view-container .view-picture .view-a-album, body .container .view-container .view-picture .view-a-album {
+              font-size: 2rem; } }
+        html .container .view-container .view-picture .view-title, body .container .view-container .view-picture .view-title {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+          @media only screen and (max-width: 320px) {
+            html .container .view-container .view-picture .view-title, body .container .view-container .view-picture .view-title {
+              font-size: 0.75rem; } }
+          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            html .container .view-container .view-picture .view-title, body .container .view-container .view-picture .view-title {
+              font-size: 1rem; } }
+          @media only screen and (min-width: 1024px) {
+            html .container .view-container .view-picture .view-title, body .container .view-container .view-picture .view-title {
+              font-size: 1rem; } }
   html footer, body footer {
     width: 100%;
     height: 40px;
@@ -94,12 +162,16 @@
       display: table-cell;
       vertical-align: middle;
       text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
+
+
     </style>
 </head>
 <body>
 <header>
     <div class="menu">
-        <a href="#">Root</a>
+        <a href="#/">Root</a>
         <a href="https://www.google.com.ua/" target="_blank">Google</a>
         <div class="header-both"></div>
     </div>
